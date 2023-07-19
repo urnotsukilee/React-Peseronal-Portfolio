@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import VerticalTabs from './SideBar';
+
+const classes = 'py-12 w-4/5 flex flex-col justify-center items-center'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex mx-auto w-2/3 divide-x-4 divide-black divide-dashed">
+      <div className="App-sidebar h-screen w-1/4 flex flex-col justify-center divide-y-2 items-center px-5" >
+        <div className={classes}>h1</div>
+        <div className={classes}>
+          <VerticalTabs/>
+        </div>
+        <div className={classes}>h2</div>
+      </div>
+      <div className='App-content w-3/4'>
+
+      </div>
     </div>
   );
 }
